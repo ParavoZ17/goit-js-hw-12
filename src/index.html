@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load ="partials/header.html" />
-
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
-
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
-
-    <script type="module" src="./main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanilla App Template</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+<div class="formBox">
+  <form class="searchForm">
+    <input class="inputSearch" type="text" name="text"
+           placeholder="Search images..." />
+    <input class="submitBtn" type="submit" value="Search" />
+  </form>
+</div>
+<div class="container gallery"></div>
+<div class="loaderBox">
+  <span class="loader"></span>
+</div>
+<div class="loadMoreBox">
+  <button class="loadMore">Load more</button>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
 </html>
