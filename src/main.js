@@ -6,7 +6,7 @@ import pixabayApi from './js/pixabay-api.js';
 import render from './js/render-function.js';
 
 let page = 1;
-const PER_PAGE = 15;
+const PER_PAGE = 20;
 const TOAST_ERR = `error`;
 const TOAST_INFO = `info`;
 const SERVER_ERR = `Something went wrong, please try again later!`;
