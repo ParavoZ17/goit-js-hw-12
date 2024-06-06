@@ -123,8 +123,8 @@ body {
 }
 
 .imgCard {
-  width: 240px;
-  height: 200px;
+  width: 340px;
+  height: auto;
   border: solid 1px #808080;
   margin-bottom: 30px;
 }
@@ -135,7 +135,7 @@ body {
 }
 
 .imgBox {
-  width: 240px;
+  width: 340px;
   height: 160px;
   border: 1px;
 }
@@ -143,9 +143,11 @@ body {
 .imgInfoItem {
   display: flex;
   flex-direction: column;
+  margin-top: 8px;
 }
 
 .item {
+
   text-align: center;
   color: #2E2F42;
 }
