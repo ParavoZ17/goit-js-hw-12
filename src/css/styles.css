@@ -135,8 +135,8 @@ body {
 }
 
 .imgBox {
-  width: 340px;
-  height: 160px;
+  width: auto;
+  height: auto;
   border: 1px;
 }
 
