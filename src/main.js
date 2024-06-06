@@ -33,7 +33,7 @@ const hideLoading = () => loaderBox.style.display = 'none';
 const showLoadMoreBtn = () => loadMoreBox.style.display = 'flex';
 const hideLoadMoreBtn = () => loadMoreBox.style.display = 'none';
 const clearContainer = () => container.innerHTML = '';
-const isNotLastPage = total => Math.round(total / PER_PAGE) !== page;
+const isNotLastPage = total => Math.ceil(total / PER_PAGE) !== page;
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt', captionDelay: 250, captionPosition: 'bottom',
 });
@@ -47,7 +47,7 @@ const autoScrollPage = () => {
 searchForm.addEventListener('submit', async event => {
   event.preventDefault();
   text = input.value;
-  page = 1;
+  page = 10;
   imagesArr.length = 0;
 
   if (text === '') return showToast(SEARCH_TEXT_ERR, TOAST_ERR);
@@ -67,9 +67,15 @@ searchForm.addEventListener('submit', async event => {
 
       imagesArr.push(...hits.map(img => render.createImgCard(img)));
       hideLoading();
+      console.log(imagesArr);
+
       container.append(...imagesArr);
 
       if (isNotLastPage(totalHits)) showLoadMoreBtn();
+      else {
+        hideLoadMoreBtn();
+        showToast(LAST_PAGE_INFO, TOAST_INFO);
+      }
     }
 
   } catch (err) {

@@ -3,8 +3,6 @@ const createImgCardItem = (img, key) => {
   const itemTitle = document.createElement('span');
   const itemValue = document.createElement('span');
   imgInfoItem.className = 'imgInfoItem';
-  itemTitle.className = 'item';
-  itemValue.className = 'item';
   itemTitle.className = 'itemTitle';
   itemValue.className = 'itemValue';
   itemTitle.innerHTML = key;
