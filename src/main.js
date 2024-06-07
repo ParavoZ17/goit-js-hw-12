@@ -47,7 +47,7 @@ const autoScrollPage = () => {
 searchForm.addEventListener('submit', async event => {
   event.preventDefault();
   text = input.value;
-  page = 10;
+  page = 1;
   imagesArr.length = 0;
 
   if (text === '') return showToast(SEARCH_TEXT_ERR, TOAST_ERR);
